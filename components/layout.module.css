@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  height: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.link {
+    width: 24px;
+    margin-right: 1rem;
+    fill: var(--calcite-ui-foreground-1);
+}
+
+.small {
+    margin-left: 0.5rem;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--calcite-ui-brand);
+    color: var(--calcite-ui-foreground-1);
+    padding: 0.75rem;
+    display: flex;
+    /* grid-template-columns: repeat(2, auto); */
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+}
+
