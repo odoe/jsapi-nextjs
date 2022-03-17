@@ -1,8 +1,12 @@
+import config from '@arcgis/core/config'
 import ArcGISMap from '@arcgis/core/Map'
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer'
 import MapView from '@arcgis/core/views/MapView'
 import Extent from '@arcgis/core/geometry/Extent'
 import { watch } from '@arcgis/core/core/reactiveUtils'
+
+config.apiKey = process.env.NEXT_PUBLIC_API_KEY as string
+console.log(process.env)
 
 interface MapApp {
     view?: MapView;
@@ -30,7 +34,7 @@ export async function initialize(container: HTMLDivElement, filter: string) {
     })
 
     const map = new ArcGISMap({
-        basemap: 'dark-gray-vector',
+        basemap: 'arcgis-dark-gray',
         layers: [layer]
     })
 
