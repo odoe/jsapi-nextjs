@@ -16,3 +16,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.item-description {
+  padding: 1rem;
+}

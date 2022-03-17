@@ -8,6 +8,7 @@
     "start": "next start -p $PORT",
     "lint": "next lint"
   },
+  "cacheDirectories": [".next/cache"],
   "dependencies": {
     "@arcgis/core": "^4.23.0-next.20220315",
     "@reduxjs/toolkit": "^1.8.0",

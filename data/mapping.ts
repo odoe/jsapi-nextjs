@@ -4,6 +4,7 @@ import FeatureLayer from '@arcgis/core/layers/FeatureLayer'
 import MapView from '@arcgis/core/views/MapView'
 import Extent from '@arcgis/core/geometry/Extent'
 import { watch } from '@arcgis/core/core/reactiveUtils'
+import Expand from '@arcgis/core/widgets/Expand'
 
 config.apiKey = process.env.NEXT_PUBLIC_API_KEY as string
 console.log(process.env)
@@ -58,6 +59,18 @@ export async function initialize(container: HTMLDivElement, filter: string) {
         }
     )
 
+    view.when(async () => {
+        await layer.when()
+        const element = document.createElement('div')
+        element.classList.add('esri-component', 'esri-widget', 'esri-widget--panel', 'item-description')
+        element.innerHTML = layer.portalItem.description
+        const expand = new Expand({
+            content: element,
+            expandIconClass: 'esri-icon-description'
+        })
+        view.ui.add(expand, 'bottom-right')
+    })
+
     app.map = map
     app.layer = layer
     app.view = view
@@ -66,6 +79,6 @@ export async function initialize(container: HTMLDivElement, filter: string) {
 }
 
 function cleanup() {
-    handler && handler.remove()
+    handler?.remove()
     app.view?.destroy()
 }
