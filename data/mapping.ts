@@ -21,8 +21,6 @@ const app: MapApp = {}
 let handler: IHandle
 
 export async function initialize(container: HTMLDivElement, filter: string) {
-    if (!container && !filter) return cleanup
-
     if (app.view) {
         app.view.destroy()
     }
