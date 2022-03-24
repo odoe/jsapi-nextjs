@@ -10,7 +10,7 @@
   },
   "cacheDirectories": [".next/cache"],
   "dependencies": {
-    "@arcgis/core": "^4.23.0-next.20220315",
+    "@arcgis/core": "^4.23.0",
     "@reduxjs/toolkit": "^1.8.0",
     "@types/react-redux": "^7.1.23",
     "next": "12.1.0",

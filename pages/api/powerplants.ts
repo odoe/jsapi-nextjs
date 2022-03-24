@@ -17,6 +17,7 @@ export default async function handler(
     outFields: ["fuel1"],
     where: "1=1",
     returnDistinctValues: true,
+    returnGeometry: false
   };
   const results = await executeQueryJSON(PLANT_URL, query);
   const values = results.features
