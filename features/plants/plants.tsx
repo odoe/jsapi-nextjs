@@ -41,7 +41,11 @@ const Plants = () => {
     return (
         <ul className={styles.list}>
             {types.map((value, idx) => (
-            <li className={styles.listItem} key={`${value}-${idx}`} onClick={() => router.push(`/webmap?type=${value}`)}>
+            <li
+                className={styles.listItem}
+                key={`${value}-${idx}`}
+                onClick={() => router.push(`/webmap?type=${value}`)}
+            >
                 {value}
             </li>
             ))}
