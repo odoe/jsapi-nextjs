@@ -7,7 +7,6 @@ import { watch } from '@arcgis/core/core/reactiveUtils'
 import Expand from '@arcgis/core/widgets/Expand'
 
 config.apiKey = process.env.NEXT_PUBLIC_API_KEY as string
-console.log(process.env)
 
 interface MapApp {
     view?: MapView;
