@@ -12,7 +12,7 @@
     ".next/cache"
   ],
   "dependencies": {
-    "@arcgis/core": "^4.23.4",
+    "@arcgis/core": "^4.25.4",
     "@reduxjs/toolkit": "^1.8.0",
     "@types/react-redux": "^7.1.23",
     "abort-controller": "^3.0.0",
